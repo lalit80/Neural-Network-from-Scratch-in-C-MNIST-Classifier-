@@ -27,6 +27,8 @@ Various architectures were tested using a custom binary data loader:
 | 784 -> 128 -> 64 -> 10 | 35 | 0.05 | **93.12%** |
 
 
+### Benchmarks (from `mnist.ipynb`)
+
 PyTorch (CNN) ==> **99.25%** 
 PyTorch (MLP) ==> 784 -> 128 -> 64 -> 10 ==> **98.24% **
 
