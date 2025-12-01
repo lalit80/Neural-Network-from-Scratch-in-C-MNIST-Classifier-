@@ -25,9 +25,8 @@ Various architectures were tested using a custom binary data loader:
 | 784 -> 16 -> 10 | 300 | 0.5 | **92.37%** |
 | 784 -> 64 -> 10 | 200 | 1.0 | **94.65%** |
 | 784 -> 128 -> 64 -> 10 | 35 | 0.05 | **93.12%** |
-
 | **PyTorch (CNN)** | **Conv2d -> MaxPool -> Conv2d -> FC** | **99.25%** |
-| PyTorch (MLP) | 784 -> 128 -> 64 -> 10 | 98.24% |
+| PyTorch (MLP) | 784 -> 128 -> 64 -> 10 | **98.24% **|
 
 ### How to Run
 1. Ensure `mnist_train_data.bin` and `mnist_test_data.bin` are in the current folder of c source file.
