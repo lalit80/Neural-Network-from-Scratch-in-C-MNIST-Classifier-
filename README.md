@@ -28,8 +28,8 @@ Various architectures were tested using a custom binary data loader:
 
 
 ### Benchmarks (from `mnist.ipynb`)
-PyTorch (MLP) ==> 784 -> 128 -> 64 -> 10 ==> 98.24%
-PyTorch (CNN) ==> 99.25%
+1. PyTorch (MLP) ==> 784 -> 128 -> 64 -> 10 ==> 98.24%
+2. PyTorch (CNN) ==> 99.25%
 
 ### How to Run
 1. Ensure `mnist_train_data.bin` and `mnist_test_data.bin` are in the current folder of c source file.
