@@ -1,37 +1,20 @@
-# mnist-neural-network-c-and-pytorch
-A comparative implementation of MNIST digit classification using a custom Neural Network engine written in C from scratch and modern PyTorch models (MLP &amp; CNN).
+# 🧠 Neural Network from Scratch in C (MNIST Classifier)
 
-# MNIST Digit Classification: C (From Scratch) vs. PyTorch
+This project implements a **feedforward neural network** (multilayer perceptron) completely **from scratch in C**, trained on the **MNIST handwritten digit dataset**.  
+No external libraries such as TensorFlow, PyTorch, or OpenCV are used — only standard C libraries (`<math.h>`, `<stdlib.h>`, `<stdio.h>`).
 
-This repository contains two implementations of neural networks trained on the MNIST dataset:
-1. **Low-Level C:** A fully connected network built entirely from scratch without external machine learning libraries.
-2. **High-Level PyTorch:** A Multi-Layer Perceptron (MLP) and a Convolutional Neural Network (CNN) using modern Deep Learning frameworks.
+The network learns to classify 28×28 grayscale digit images (0–9) through **stochastic gradient descent (SGD)** and **backpropagation**.
 
-## 1. C Implementation (From Scratch)
-This implementation demonstrates the internal workings of a neural network, including dynamic memory allocation, matrix operations, and the backpropagation algorithm implemented manually.
+---
 
-### Features
-* **Language:** C (Standard Libraries only: `math.h`, `stdlib.h`, etc.)
-* **Architecture:** Configurable Multi-Layer Perceptron (MLP).
-* **Optimization:** Stochastic Gradient Descent (SGD) with mini-batches.
-* **Memory Management:** Dynamic allocation for layers, weights, biases, and gradients.
+## 🚀 Key Features
 
-### Benchmarks (from `network.c`)
-Various architectures were tested using a custom binary data loader:
+- **Pure C Implementation** – built entirely without ML libraries.  
+- **Configurable Architecture** – define any number of layers and neurons.  
+- **Feedforward Computation** – using sigmoid activation.  
+- **Backpropagation** – implemented manually to compute gradients.  
+- **Mini-Batch Stochastic Gradient Descent (SGD)** – for efficient training.  
+- **Binary MNIST Loader** – custom binary file format for fast loading.  
+- **Performance Metrics** – prints test accuracy after training.  
 
-| Architecture | Epochs | Learning Rate | Accuracy |
-| :--- | :--- | :--- | :--- |
-| 784 -> 10 | 200 | 1.0 | **92.14%** |
-| 784 -> 16 -> 10 | 300 | 0.5 | **92.37%** |
-| 784 -> 64 -> 10 | 200 | 1.0 | **94.65%** |
-| 784 -> 128 -> 64 -> 10 | 35 | 0.05 | **93.12%** |
-
-
-### Benchmarks (from `mnist.ipynb`)
-1. PyTorch (MLP) ==> 784 -> 128 -> 64 -> 10 ==> 98.24%
-2. PyTorch (CNN) ==> 99.25%
-
-### How to Run
-1. Ensure `mnist_train_data.bin` and `mnist_test_data.bin` are in the current folder of c source file.
-2. Compile the code:
-   gcc network.c -o network
+---
